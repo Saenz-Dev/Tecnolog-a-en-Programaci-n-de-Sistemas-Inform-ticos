@@ -86,3 +86,28 @@ document.getElementById("btn-tres").addEventListener("click", () => { llenarPlan
 document.getElementById("btn-cuatro").addEventListener("click", () => { llenarPlanEstudios(4) });
 document.getElementById("btn-cinco").addEventListener("click", () => { llenarPlanEstudios(5) });
 document.getElementById("btn-seis").addEventListener("click", () => { llenarPlanEstudios(6) });
+
+/*Funcion para pasar de pagina el slider*/
+let posicionSlider = 0;
+
+function pasarGrupos(direccion) {
+    let grupo = document.getElementsByClassName("slide");
+    for (let i = 0; i < grupo.length; i++) {
+        grupo[i].style.display = "none";
+    }
+    posicionSlider += direccion; 
+    if (posicionSlider >= grupo.length) {
+        posicionSlider = 0;
+    }
+    if (posicionSlider < 0) {
+        posicionSlider = grupo.length - 1;
+    }
+    grupo[posicionSlider].style.display = "block";
+}
+
+document.getElementById("btn-antes").addEventListener("click", () => {
+    pasarGrupos(-1);
+});
+document.getElementById("btn-despues").addEventListener("click", () => {
+    pasarGrupos(1);
+});

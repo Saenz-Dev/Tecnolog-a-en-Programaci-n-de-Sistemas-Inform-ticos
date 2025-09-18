@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Liter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Tecnología en Programación de Sistemas Informáticos</title>
 </head>
 
 <body>
-    <header>
-        <h1>Tecnología en Programación de Sistemas Informáticos</h1>
+    <header id="header">
+        <div>
+            <img src="img/computador.png" alt="Icono de computador" width="100px" height="75px">
+            <h1>Tecnología en Programación de Sistemas Informáticos</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#plan-estudios">Plan de Estudios</a></li>
@@ -20,57 +29,57 @@
     </header>
     <main>
         <section class="seccion" id="plan-estudios">
-            <h2>Plan de Estudios</h2>
+            <h2 class="titulo">Plan de Estudios</h2>
             <div>
-                <h3 class="titulo" id="titulo-tabla">Semestre 1</h3>
+                <h3 id="titulo-tabla">Semestre 1</h3>
                 <div>
-                    <button id="btn-uno">1</button>
-                    <button id="btn-dos">2</button>
-                    <button id="btn-tres">3</button>
-                    <button id="btn-cuatro">4</button>
-                    <button id="btn-cinco">5</button>
-                    <button id="btn-seis">6</button>
+                    <button class="btn" id="btn-uno">1</button>
+                    <button class="btn" id="btn-dos">2</button>
+                    <button class="btn" id="btn-tres">3</button>
+                    <button class="btn" id="btn-cuatro">4</button>
+                    <button class="btn" id="btn-cinco">5</button>
+                    <button class="btn" id="btn-seis">6</button>
                 </div>
             </div>
             <div class="div-pe">
                 <table id="table-asignaturas" class="table">
                     <thead class="thead-asignaturas">
                         <tr>
-                            <th>Asignatura</th>
+                            <th style="width: 35%;">Asignatura</th>
                             <th>Créditos</th>
                             <th>Intensidad horaria Semanal</th>
-                            <th>Habilidades</th>
+                            <th style="width: 35%;">Habilidades</th>
                         </tr>
                     </thead>
                     <tbody class="body-asignaturas">
                         <tr>
                             <td>Métodos de estudio y aprendizaje autónomo</td>
                             <td>3</td>
-                            <td>0</td>
+                            <td>9</td>
                             <td>Gestión del tiempo y técnicas de aprendizaje.</td>
                         </tr>
                         <tr>
                             <td>Instalación y Configuración de Sistemas Operativos</td>
                             <td>3</td>
-                            <td>0</td>
+                            <td>9</td>
                             <td>Instalar y configurar sistemas operativos</td>
                         </tr>
                         <tr>
                             <td>Fundamentos de Programación</td>
                             <td>4</td>
-                            <td>0</td>
+                            <td>12</td>
                             <td>Resolver problemas básicos con código</td>
                         </tr>
                         <tr>
                             <td>Herramientas Digitales para la Gestión del Conocimiento</td>
                             <td>3</td>
-                            <td>0</td>
+                            <td>9</td>
                             <td>Usar software para organizar y comunicar información</td>
                         </tr>
                         <tr>
                             <td>Pensamiento Lógico y Matemático</td>
                             <td>3</td>
-                            <td>0</td>
+                            <td>9</td>
                             <td>Aplicar lógica y matemáticas en resolución de problemas</td>
                         </tr>
                     </tbody>
@@ -79,385 +88,421 @@
         </section>
 
         <section class="seccion" id="seccion-investigacion">
-            <h2>Grupos de Investigación</h2>
-            <div class="slides">
-                <div class="slide">
-                    <div class="div-grupos">
-                        <h2 class="titulo titullo-grupo">TICA (Tecnología Investigación y Ciencia Aplicada)</h2>
-                        <p>Adscrito a la Facultad de Estudios a Distancia y tiene al menos 20 años de existencia.</p>
-                        <img src="" alt=""><!--Creeria que es mejor ponerla de fondo-->
-                        <p>Director del Grupo: <span>Ariel Adolfo Rodriguez Hernandez</span></p>
+            <h2 class="titulo">Grupos de Investigación</h2>
+            <div class="div-container">
+                <div class="slides">
+                    <div class="slide">
+                        <div class="div-grupos">
+                            <h2 class="titulo titulo-grupo">TICA (Tecnología Investigación y Ciencia Aplicada)</h2>
+                            <p>Adscrito a la Facultad de Estudios a Distancia y tiene al menos 20 años de existencia.
+                            </p>
+                            <a href=""><img src="img/tica.png" alt="Logo de Grupo de Investigación TICA"></a>
+                            <p>Director del Grupo: <span>Ariel Adolfo Rodriguez Hernandez</span></p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Áreas de Investigación:</h3>
+                            <p>
+                                El programa con apoyo de los grupos de investigación adscritos al programa ha definido
+                                las
+                                siguientes líneas de investigación.
+                            </p>
+                            <ul>
+                                <li>Sistemas de Información y TIC (bases de datos, ingeniería de software, gestión
+                                    tecnológica,
+                                    redes y telecomunicaciones).</li>
+                                <li>Tecnologías Digitales (gestión del Conocimiento, TIC en educación, e-learning,
+                                    ambientes
+                                    de
+                                    aprendizaje en línea, redes sociales)</li>
+                                <li>Internet de las Cosas y automatización (IoT aplicada, electrónica aplicada y
+                                    automatización)
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">
+                                Proyectos en Desarollo:
+                            </h3>
+                            <p>
+                                El Grupo TICA impulsa la investigación y la innovación en tecnologías aplicadas a la
+                                educación y la sociedad. Actualmente desarrolla proyectos en aulas virtuales
+                                inteligentes,
+                                laboratorios remotos para ciencias e ingeniería y un observatorio de innovación
+                                educativa,
+                                con el objetivo de fortalecer la enseñanza a distancia, democratizar el acceso a la
+                                experimentación científica y promover la transformación digital en la región.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">
+                                Logros:
+                            </h3>
+                            <ul>
+                                <li>Ser ganador de un premio universitario por su labor en la implementación de
+                                    tecnología
+                                    en
+                                    educación.</li>
+                                <li>Fue uno de los grupos de investigación destacados en el ranking de Desarrollo
+                                    Tecnológico e
+                                    Innovación de Sapiens Research de 2021. En ese ranking, TICA aparece entre los
+                                    mejores
+                                    grupos de la UPTC en productos tecnológicos certificados o validados ante
+                                    Minciencias.</li>
+                                <li>Producción científica visible en el repositorio de la UPTC bajo su nombre, lo que
+                                    sugiere
+                                    que ya poseen productos como artículos, reportes, etc.</li>
+                            </ul>
+                        </div>
+                        <div class="seccion" id="seccion-formulario">
+                            <h2 class="titulo-seccion subtitulo">Inscríbete en TICA</h2>
+                            <form action="">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="input" id="nombres" placeholder="Tus nombres">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
+                                <label for="telefono">Télefono</label>
+                                <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
+                                <label for="select-programa">Programa</label>
+                                <select name="emprendimiento" id="select-programa">
+                                    <option>Tecnólogia en Programación de Sistemas Informáticos</option>
+                                    <option>Tecnologia en Electricidad</option>
+                                    <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
+                                    <option>Tecnología en Obras Civiles</option>
+                                    <option>Tecnología en Electrididad Industrial</option>
+                                </select>
+                                <button type="submit" id="boton-enviar">Enviar</button>
+                                <button type="reset" id="boton-limpiar">Limpiar</button>
+                            </form>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Áreas de Investigación:</h3>
-                        <p>
-                            El programa con apoyo de los grupos de investigación adscritos al programa ha definido las
-                            siguientes líneas de investigación.
-                        </p>
-                        <ul>
-                            <li>Sistemas de Información y TIC (bases de datos, ingeniería de software, gestión
-                                tecnológica,
-                                redes y telecomunicaciones).</li>
-                            <li>Tecnologías Digitales (gestión del Conocimiento, TIC en educación, e-learning, ambientes
-                                de
-                                aprendizaje en línea, redes sociales)</li>
-                            <li>Internet de las Cosas y automatización (IoT aplicada, electrónica aplicada y
-                                automatización)
-                            </li>
-                        </ul>
+                    <div class="slide">
+                        <div class="div-grupos">
+                            <h2 class="titulo titulo-grupo">GTI (Grupo Tecno-Innovaciones)</h2>
+                            <p>Adscrito a la Facultad de Ingeniería y enfocado en la aplicación de la innovación
+                                tecnológica
+                                en distintos sectores productivos y sociales.</p>
+                            <a href=""><img src="img/tecnoinnovaciones.png"
+                                    alt="Logo del Grupo de Investigación Tecno-Innovaciones"></a>
+                            <p>Director del Grupo: <span>Jorge Eduardo Ramírez Pérez</span></p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Áreas de Investigación:</h3>
+                            <p>
+                                Sus líneas de investigación buscan integrar la ciencia, la innovación y la tecnología en
+                                contextos productivos.
+                            </p>
+                            <ul>
+                                <li>Desarrollo de software e ingeniería aplicada.</li>
+                                <li>Gestión de la innovación en empresas y organizaciones.</li>
+                                <li>Automatización de procesos y sistemas inteligentes.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Proyectos en Desarrollo:</h3>
+                            <p>
+                                El grupo GTI desarrolla iniciativas en inteligencia artificial aplicada al sector
+                                productivo, plataformas de innovación abierta para pymes y soluciones de automatización
+                                industrial, con el fin de impulsar la competitividad y la transferencia tecnológica en
+                                la
+                                región.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Logros:</h3>
+                            <ul>
+                                <li>Reconocido en convocatorias de Minciencias por proyectos de innovación empresarial.
+                                </li>
+                                <li>Desarrollo de software certificado y adoptado por empresas de la región.</li>
+                                <li>Formación de talento humano especializado en innovación tecnológica.</li>
+                            </ul>
+                        </div>
+                        <div class="seccion" id="seccion-formulario">
+                            <h2 class="titulo-seccion subtitulo">Inscríbete en GTI</h2>
+                            <form action="">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="input" id="nombres" placeholder="Tus nombres">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
+                                <label for="telefono">Télefono</label>
+                                <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
+                                <label for="select-programa">Programa</label>
+                                <select name="emprendimiento" id="select-programa">
+                                    <option>Tecnólogia en Programación de Sistemas Informáticos</option>
+                                    <option>Tecnologia en Electricidad</option>
+                                    <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
+                                    <option>Tecnología en Obras Civiles</option>
+                                    <option>Tecnología en Electrididad Industrial</option>
+                                </select>
+                                <button type="submit" id="boton-enviar">Enviar</button>
+                                <button type="reset" id="boton-limpiar">Limpiar</button>
+                            </form>
+                        </div>
                     </div>
-                    <div>
-                        <h3>
-                            Proyectos en Desarollo:
-                        </h3>
-                        <p>
-                            El Grupo TICA impulsa la investigación y la innovación en tecnologías aplicadas a la
-                            educación y la sociedad. Actualmente desarrolla proyectos en aulas virtuales inteligentes,
-                            laboratorios remotos para ciencias e ingeniería y un observatorio de innovación educativa,
-                            con el objetivo de fortalecer la enseñanza a distancia, democratizar el acceso a la
-                            experimentación científica y promover la transformación digital en la región.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>
-                            Logros:
-                        </h3>
-                        <ul>
-                            <li>Ser ganador de un premio universitario por su labor en la implementación de tecnología
-                                en
-                                educación.</li>
-                            <li>Fue uno de los grupos de investigación destacados en el ranking de Desarrollo
-                                Tecnológico e
-                                Innovación de Sapiens Research de 2021. En ese ranking, TICA aparece entre los mejores
-                                grupos de la UPTC en productos tecnológicos certificados o validados ante
-                                Minciencias.</li>
-                            <li>Producción científica visible en el repositorio de la UPTC bajo su nombre, lo que
-                                sugiere
-                                que ya poseen productos como artículos, reportes, etc.</li>
-                        </ul>
-                    </div>
-                    <div class="seccion" id="seccion-formulario">
-                        <h2 class="titulo-seccion">Inscríbete en TICA</h2>
-                        <form action="">
-                            <label for="nombres">Nombres</label>
-                            <input type="text" class="input" id="nombres" placeholder="Tus nombres">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
-                            <label for="telefono">Télefono</label>
-                            <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
-                            <label for="select-programa">Programa</label>
-                            <select name="emprendimiento" id="select-emprendimiento">
-                                <option>Tecnólogia en Programación de Sistemas Informáticos</option>
-                                <option>Tecnologia en Electricidad</option>
-                                <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
-                                <option>Tecnología en Obras Civiles</option>
-                                <option>Tecnología en Electrididad Industrial</option>
-                            </select>
-                            <button type="submit" id="boton-enviar">Enviar</button>
-                            <button type="reset" id="boton-limpiar">Limpiar</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="div-grupos">
-                        <h2 class="titulo titullo-grupo">GTI (Grupo Tecno-Innovaciones)</h2>
-                        <p>Adscrito a la Facultad de Ingeniería y enfocado en la aplicación de la innovación tecnológica
-                            en distintos sectores productivos y sociales.</p>
-                        <img src="" alt=""><!-- Mejor usar de fondo -->
-                        <p>Director del Grupo: <span>Jorge Eduardo Ramírez Pérez</span></p>
-                    </div>
-                    <div>
-                        <h3>Áreas de Investigación:</h3>
-                        <p>
-                            Sus líneas de investigación buscan integrar la ciencia, la innovación y la tecnología en
-                            contextos productivos.
-                        </p>
-                        <ul>
-                            <li>Desarrollo de software e ingeniería aplicada.</li>
-                            <li>Gestión de la innovación en empresas y organizaciones.</li>
-                            <li>Automatización de procesos y sistemas inteligentes.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Proyectos en Desarrollo:</h3>
-                        <p>
-                            El grupo GTI desarrolla iniciativas en inteligencia artificial aplicada al sector
-                            productivo, plataformas de innovación abierta para pymes y soluciones de automatización
-                            industrial, con el fin de impulsar la competitividad y la transferencia tecnológica en la
-                            región.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Logros:</h3>
-                        <ul>
-                            <li>Reconocido en convocatorias de Minciencias por proyectos de innovación empresarial.</li>
-                            <li>Desarrollo de software certificado y adoptado por empresas de la región.</li>
-                            <li>Formación de talento humano especializado en innovación tecnológica.</li>
-                        </ul>
-                    </div>
-                    <div class="seccion" id="seccion-formulario">
-                        <h2 class="titulo-seccion">Inscríbete en GTI</h2>
-                        <form action="">
-                            <label for="nombres">Nombres</label>
-                            <input type="text" class="input" id="nombres" placeholder="Tus nombres">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
-                            <label for="telefono">Télefono</label>
-                            <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
-                            <label for="select-programa">Programa</label>
-                            <select name="emprendimiento" id="select-emprendimiento">
-                                <option>Tecnólogia en Programación de Sistemas Informáticos</option>
-                                <option>Tecnologia en Electricidad</option>
-                                <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
-                                <option>Tecnología en Obras Civiles</option>
-                                <option>Tecnología en Electrididad Industrial</option>
-                            </select>
-                            <button type="submit" id="boton-enviar">Enviar</button>
-                            <button type="reset" id="boton-limpiar">Limpiar</button>
-                        </form>
-                    </div>
-                </div>
 
-                <div class="slide">
-                    <div class="div-grupos">
-                        <h2 class="titulo titullo-grupo">GIDATI (Grupo de Investigación en Desarrollo de Aplicaciones
-                            con Tecnologías de Información)</h2>
-                        <p>Adscrito a la Facultad de Ingeniería y dedicado a la investigación en ingeniería de software
-                            y tecnologías de la información.</p>
-                        <img src="" alt="">
-                        <p>Director del Grupo: <span>Martha Lucía Rodríguez Gómez</span></p>
+                    <div class="slide">
+                        <div class="div-grupos">
+                            <h2 class="titulo titulo-grupo">GIDATI (Grupo de Investigación en Desarrollo de
+                                Aplicaciones
+                                con Tecnologías de Información)</h2>
+                            <p>Adscrito a la Facultad de Ingeniería y dedicado a la investigación en ingeniería de
+                                software
+                                y tecnologías de la información.</p>
+                            <a href=""><img src="img/gidati.png" alt="Logo del Grupo de Investigación GIDATI"></a>
+                            <p>Director del Grupo: <span>Martha Lucía Rodríguez Gómez</span></p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Áreas de Investigación:</h3>
+                            <p>
+                                El grupo se centra en la construcción y aplicación de tecnologías de información para
+                                solucionar problemas reales.
+                            </p>
+                            <ul>
+                                <li>Ingeniería de software y metodologías ágiles.</li>
+                                <li>Sistemas distribuidos y aplicaciones móviles.</li>
+                                <li>Arquitectura empresarial y gobierno de TI.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Proyectos en Desarrollo:</h3>
+                            <p>
+                                Actualmente lidera proyectos de aplicaciones móviles para educación, plataformas de
+                                gestión
+                                empresarial en la nube y sistemas inteligentes de apoyo a la toma de decisiones.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Logros:</h3>
+                            <ul>
+                                <li>Participación activa en congresos internacionales de ingeniería de software.</li>
+                                <li>Generación de patentes de software con impacto empresarial.</li>
+                                <li>Producción académica indexada en revistas de alto impacto.</li>
+                            </ul>
+                        </div>
+                        <div class="seccion" id="seccion-formulario">
+                            <h2 class="titulo-seccion subtitulo">Inscríbete en GIDAII</h2>
+                            <form action="">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="input" id="nombres" placeholder="Tus nombres">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
+                                <label for="telefono">Télefono</label>
+                                <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
+                                <label for="select-programa">Programa</label>
+                                <select name="emprendimiento" id="select-programa">
+                                    <option>Tecnólogia en Programación de Sistemas Informáticos</option>
+                                    <option>Tecnologia en Electricidad</option>
+                                    <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
+                                    <option>Tecnología en Obras Civiles</option>
+                                    <option>Tecnología en Electrididad Industrial</option>
+                                </select>
+                                <button type="submit" id="boton-enviar">Enviar</button>
+                                <button type="reset" id="boton-limpiar">Limpiar</button>
+                            </form>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Áreas de Investigación:</h3>
-                        <p>
-                            El grupo se centra en la construcción y aplicación de tecnologías de información para
-                            solucionar problemas reales.
-                        </p>
-                        <ul>
-                            <li>Ingeniería de software y metodologías ágiles.</li>
-                            <li>Sistemas distribuidos y aplicaciones móviles.</li>
-                            <li>Arquitectura empresarial y gobierno de TI.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Proyectos en Desarrollo:</h3>
-                        <p>
-                            Actualmente lidera proyectos de aplicaciones móviles para educación, plataformas de gestión
-                            empresarial en la nube y sistemas inteligentes de apoyo a la toma de decisiones.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Logros:</h3>
-                        <ul>
-                            <li>Participación activa en congresos internacionales de ingeniería de software.</li>
-                            <li>Generación de patentes de software con impacto empresarial.</li>
-                            <li>Producción académica indexada en revistas de alto impacto.</li>
-                        </ul>
-                    </div>
-                    <div class="seccion" id="seccion-formulario">
-                        <h2 class="titulo-seccion">Inscríbete en GIDAII</h2>
-                        <form action="">
-                            <label for="nombres">Nombres</label>
-                            <input type="text" class="input" id="nombres" placeholder="Tus nombres">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
-                            <label for="telefono">Télefono</label>
-                            <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
-                            <label for="select-programa">Programa</label>
-                            <select name="emprendimiento" id="select-emprendimiento">
-                                <option>Tecnólogia en Programación de Sistemas Informáticos</option>
-                                <option>Tecnologia en Electricidad</option>
-                                <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
-                                <option>Tecnología en Obras Civiles</option>
-                                <option>Tecnología en Electrididad Industrial</option>
-                            </select>
-                            <button type="submit" id="boton-enviar">Enviar</button>
-                            <button type="reset" id="boton-limpiar">Limpiar</button>
-                        </form>
-                    </div>
-                </div>
 
-                <div class="slide">
-                    <div class="div-grupos">
-                        <h2 class="titulo titullo-grupo">GII (Grupo de Investigación en Informática)</h2>
-                        <p>Con más de 15 años de trayectoria, trabaja en el desarrollo de tecnologías de la información
-                            aplicadas a la sociedad.</p>
-                        <img src="" alt="">
-                        <p>Director del Grupo: <span>Carlos Andrés Medina Suárez</span></p>
+                    <div class="slide">
+                        <div class="div-grupos">
+                            <h2 class="titulo titulo-grupo">GII (Grupo de Investigación en Informática)</h2>
+                            <p>Con más de 15 años de trayectoria, trabaja en el desarrollo de tecnologías de la
+                                información
+                                aplicadas a la sociedad.</p>
+                            <a href=""><img src="img/gii.png" alt="Logo del Grupo de Investigación GII"></a>
+                            <p>Director del Grupo: <span>Carlos Andrés Medina Suárez</span></p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Áreas de Investigación:</h3>
+                            <p>
+                                Sus líneas buscan la integración de la informática en diferentes sectores de la
+                                sociedad.
+                            </p>
+                            <ul>
+                                <li>Big Data y analítica de datos.</li>
+                                <li>Computación en la nube.</li>
+                                <li>Seguridad informática y criptografía.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Proyectos en Desarrollo:</h3>
+                            <p>
+                                Entre sus proyectos están plataformas de análisis de datos para el sector salud,
+                                sistemas de
+                                ciberseguridad preventiva y servicios en la nube para instituciones educativas.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Logros:</h3>
+                            <ul>
+                                <li>Publicación de artículos en revistas internacionales sobre seguridad y Big Data.
+                                </li>
+                                <li>Asesoría a entidades públicas en gestión de datos y seguridad informática.</li>
+                                <li>Vinculación de estudiantes en semilleros de investigación exitosos.</li>
+                            </ul>
+                        </div>
+                        <div class="seccion" id="seccion-formulario">
+                            <h2 class="titulo-seccion subtitulo">Inscríbete en GII</h2>
+                            <form action="">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="input" id="nombres" placeholder="Tus nombres">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
+                                <label for="telefono">Télefono</label>
+                                <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
+                                <label for="select-programa">Programa</label>
+                                <select name="emprendimiento" id="select-programa">
+                                    <option>Tecnólogia en Programación de Sistemas Informáticos</option>
+                                    <option>Tecnologia en Electricidad</option>
+                                    <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
+                                    <option>Tecnología en Obras Civiles</option>
+                                    <option>Tecnología en Electrididad Industrial</option>
+                                </select>
+                                <button type="submit" id="boton-enviar">Enviar</button>
+                                <button type="reset" id="boton-limpiar">Limpiar</button>
+                            </form>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Áreas de Investigación:</h3>
-                        <p>
-                            Sus líneas buscan la integración de la informática en diferentes sectores de la sociedad.
-                        </p>
-                        <ul>
-                            <li>Big Data y analítica de datos.</li>
-                            <li>Computación en la nube.</li>
-                            <li>Seguridad informática y criptografía.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Proyectos en Desarrollo:</h3>
-                        <p>
-                            Entre sus proyectos están plataformas de análisis de datos para el sector salud, sistemas de
-                            ciberseguridad preventiva y servicios en la nube para instituciones educativas.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Logros:</h3>
-                        <ul>
-                            <li>Publicación de artículos en revistas internacionales sobre seguridad y Big Data.</li>
-                            <li>Asesoría a entidades públicas en gestión de datos y seguridad informática.</li>
-                            <li>Vinculación de estudiantes en semilleros de investigación exitosos.</li>
-                        </ul>
-                    </div>
-                    <div class="seccion" id="seccion-formulario">
-                        <h2 class="titulo-seccion">Inscríbete en GII</h2>
-                        <form action="">
-                            <label for="nombres">Nombres</label>
-                            <input type="text" class="input" id="nombres" placeholder="Tus nombres">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
-                            <label for="telefono">Télefono</label>
-                            <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
-                            <label for="select-programa">Programa</label>
-                            <select name="emprendimiento" id="select-emprendimiento">
-                                <option>Tecnólogia en Programación de Sistemas Informáticos</option>
-                                <option>Tecnologia en Electricidad</option>
-                                <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
-                                <option>Tecnología en Obras Civiles</option>
-                                <option>Tecnología en Electrididad Industrial</option>
-                            </select>
-                            <button type="submit" id="boton-enviar">Enviar</button>
-                            <button type="reset" id="boton-limpiar">Limpiar</button>
-                        </form>
-                    </div>
-                </div>
 
-                <div class="slide">
-                    <div class="div-grupos">
-                        <h2 class="titulo titullo-grupo">GAMMA (Grupo de Análisis Matemático y Modelamiento Aplicado)
-                        </h2>
-                        <p>Adscrito a la Facultad de Ciencias, se enfoca en el estudio de modelos matemáticos aplicados
-                            a problemas reales.</p>
-                        <img src="" alt="">
-                        <p>Director del Grupo: <span>Laura Fernanda Suárez López</span></p>
-                    </div>
-                    <div>
-                        <h3>Áreas de Investigación:</h3>
-                        <p>
-                            Sus líneas de investigación buscan usar las matemáticas aplicadas en ciencia, ingeniería y
-                            sociedad.
-                        </p>
-                        <ul>
-                            <li>Modelamiento matemático de fenómenos físicos y sociales.</li>
-                            <li>Análisis numérico y métodos computacionales.</li>
-                            <li>Optimización y simulación de procesos.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Proyectos en Desarrollo:</h3>
-                        <p>
-                            Desarrolla proyectos de simulación de sistemas ambientales, optimización de procesos
-                            industriales y análisis de datos para predicciones científicas.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Logros:</h3>
-                        <ul>
-                            <li>Colaboraciones internacionales en proyectos de modelado climático.</li>
-                            <li>Desarrollo de software de simulación matemática usado en universidades.</li>
-                            <li>Producción científica en revistas indexadas de matemáticas aplicadas.</li>
-                        </ul>
-                    </div>
-                    <div class="seccion" id="seccion-formulario">
-                        <h2 class="titulo-seccion">Inscríbete en GAMMA</h2>
-                        <form action="">
-                            <label for="nombres">Nombres</label>
-                            <input type="text" class="input" id="nombres" placeholder="Tus nombres">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
-                            <label for="telefono">Télefono</label>
-                            <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
-                            <label for="select-programa">Programa</label>
-                            <select name="emprendimiento" id="select-emprendimiento">
-                                <option>Tecnólogia en Programación de Sistemas Informáticos</option>
-                                <option>Tecnologia en Electricidad</option>
-                                <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
-                                <option>Tecnología en Obras Civiles</option>
-                                <option>Tecnología en Electrididad Industrial</option>
-                            </select>
-                            <button type="submit" id="boton-enviar">Enviar</button>
-                            <button type="reset" id="boton-limpiar">Limpiar</button>
-                        </form>
+                    <div class="slide">
+                        <div class="div-grupos">
+                            <h2 class="titulo titulo-grupo">GAMMA (Grupo de Análisis Matemático y Modelamiento
+                                Aplicado)
+                            </h2>
+                            <p>Adscrito a la Facultad de Ciencias, se enfoca en el estudio de modelos matemáticos
+                                aplicados
+                                a problemas reales.</p>
+                            <a href=""><img src="img/gamma.png" alt=""></a>
+                            <p>Director del Grupo: <span>Laura Fernanda Suárez López</span></p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Áreas de Investigación:</h3>
+                            <p>
+                                Sus líneas de investigación buscan usar las matemáticas aplicadas en ciencia, ingeniería
+                                y
+                                sociedad.
+                            </p>
+                            <ul>
+                                <li>Modelamiento matemático de fenómenos físicos y sociales.</li>
+                                <li>Análisis numérico y métodos computacionales.</li>
+                                <li>Optimización y simulación de procesos.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Proyectos en Desarrollo:</h3>
+                            <p>
+                                Desarrolla proyectos de simulación de sistemas ambientales, optimización de procesos
+                                industriales y análisis de datos para predicciones científicas.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="subtitulo">Logros:</h3>
+                            <ul>
+                                <li>Colaboraciones internacionales en proyectos de modelado climático.</li>
+                                <li>Desarrollo de software de simulación matemática usado en universidades.</li>
+                                <li>Producción científica en revistas indexadas de matemáticas aplicadas.</li>
+                            </ul>
+                        </div>
+                        <div class="seccion" id="seccion-formulario">
+                            <h2 class="titulo-seccion subtitulo">Inscríbete en GAMMA</h2>
+                            <form action="">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="input" id="nombres" placeholder="Tus nombres">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="input" id="apellidos" placeholder="Tu apellido">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="input" id="correo" placeholder="usuario@gmail.com">
+                                <label for="telefono">Télefono</label>
+                                <input type="number" class="input" id="telefono" placeholder="Ej: 3332332322">
+                                <label for="select-programa">Programa</label>
+                                <select name="emprendimiento" id="select-programa">
+                                    <option>Tecnólogia en Programación de Sistemas Informáticos</option>
+                                    <option>Tecnologia en Electricidad</option>
+                                    <option>Tecnología en Gestión de Redes y Sistemas Teleinformáticos</option>
+                                    <option>Tecnología en Obras Civiles</option>
+                                    <option>Tecnología en Electrididad Industrial</option>
+                                </select>
+                                <button type="submit" class="boton" id="boton-enviar">Enviar</button>
+                                <button type="reset" class="boton" id="boton-limpiar">Limpiar</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
+                <button type="button" class="btn-antes btn" id="btn-antes">❮</button>
+                <button type="button" class="btn-despues btn" id="btn-despues">❯</button>
             </div>
         </section>
 
         <section class="seccion" id="marco-formativo">
-            <h2>Marco Formativo</h2>
-            <div class="slides">
-                <div class="slide" id="mision">
-                    <h2 class="titulo-seccion">Misión</h2>
+            <h2 class="titulo">Marco Formativo</h2>
+            <div class="div-misvis">
+                <div class="marcos-inst" id="mision">
                     <p class="contenido-seccion">
                         El programa de Tecnología en Programación de Sistemas Informáticos tiene como misión: formar
-                        tecnólogos con valores éticos y morales, que desarrollen habilidades y destrezas fundamentadas
-                        en el conocimiento específico de los sistemas informáticos y las TIC, para que contribuyan al
+                        tecnólogos con valores éticos y morales, que desarrollen habilidades y destrezas
+                        fundamentadas
+                        en el conocimiento específico de los sistemas informáticos y las TIC, para que contribuyan
+                        al
                         desarrollo y la competitividad de las empresas y del país. Apoyando procesos de diseño,
                         modernización e implantación de soluciones de software y tecnología en la empresa.
                     </p>
                 </div>
-                <div class="slide" id="vision">
-                    <h2 class="titulo-seccion">Visión</h2>
+                <div class="marcos-inst" id="vision">
                     <p class="contenido-seccion">
-                        Ser el programa de Tecnología en Programación de Sistemas Informáticos de mayor calidad en el
-                        país, y de la misma manera tener la mayor cobertura posible a nivel nacional, de manera que los
-                        Tecnólogos egresados de este programa tengan acceso laboral inmediato y la capacidad de formar
-                        su propia empresa, para que contribuyan al desarrollo de su región y del país.; lograr a mediano
-                        plazo la formación de Tecnólogos en Programación de Sistemas Informáticos que atiendan las
-                        necesidades que el medio empresarial exige, utilizando las TIC, modelos educativos adecuados y
-                        un grupo de docentes comprometido con el mejoramiento continuo del programa, bajo un marco de
+                        Ser el programa de Tecnología en Programación de Sistemas Informáticos de mayor calidad
+                        en
+                        el
+                        país, y de la misma manera tener la mayor cobertura posible a nivel nacional, de manera
+                        que
+                        los
+                        Tecnólogos egresados de este programa tengan acceso laboral inmediato y la capacidad de
+                        formar
+                        su propia empresa, para que contribuyan al desarrollo de su región y del país.; lograr a
+                        mediano
+                        plazo la formación de Tecnólogos en Programación de Sistemas Informáticos que atiendan
+                        las
+                        necesidades que el medio empresarial exige, utilizando las TIC, modelos educativos
+                        adecuados
+                        y
+                        un grupo de docentes comprometido con el mejoramiento continuo del programa, bajo un
+                        marco
+                        de
                         interdisciplinaridad y mayor cobertura nacional.
                     </p>
                 </div>
-                <div class="slide" id="perfil-ocupacional">
-                    <h2 class="titulo-seccion">Perfil Ocupacional</h2>
-                    <p class="contenido-seccion">
-                        El tecnólogo formado bajo este programa desarrolla las siguientes capacidades:
-                    </p>
-                    <ul class="li-perfil">
-                        <li>
-                            Desarrollar soluciones de software ajustadas a lo que requieren empresas u organizaciones
-                            (locales, nacionales e incluso internacionales), usando metodologías, estándares y
-                            tecnologías
-                            actualizadas.
-                        </li>
-                        <li>
-                            Hacer soporte y mantenimiento de la infraestructura tecnológica (hardware, software, redes,
-                            componentes informáticos) de una organización.
-                        </li>
-                        <li>
-                            Trabajar en equipo, comunicarse bien, con sentido ético.
-                        </li>
-                        <li>
-                            Tener capacidad para investigar, innovar y emprender negocios o proyectos propios
-                            relacionados
-                            con software, TIC o soporte tecnológico.
-                        </li>
-                    </ul>
-                </div>
             </div>
+            <div class="marcos-inst" id="perfil-ocupacional">
+                <p class="contenido-seccion">
+                    El tecnólogo formado bajo este programa desarrolla las siguientes capacidades:
+                </p>
+                <ul class="li-perfil">
+                    <li>
+                        Desarrollar soluciones de software ajustadas a lo que requieren empresas u organizaciones
+                        (locales, nacionales e incluso internacionales), usando metodologías, estándares y
+                        tecnologías
+                        actualizadas.
+                    </li>
+                    <li>
+                        Hacer soporte y mantenimiento de la infraestructura tecnológica (hardware, software, redes,
+                        componentes informáticos) de una organización.
+                    </li>
+                    <li>
+                        Trabajar en equipo, comunicarse bien, con sentido ético.
+                    </li>
+                    <li>
+                        Tener capacidad para investigar, innovar y emprender negocios o proyectos propios
+                        relacionados
+                        con software, TIC o soporte tecnológico.
+                    </li>
+                </ul>
+            </div>
+
         </section>
     </main>
     <footer>

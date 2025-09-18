@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    height: 7rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #0D47A1;
+    border-radius: 0 0 20px 20px;
+}
+
+header div {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+header div h1 {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    font-size: 25px;
+    color: white;
+}
+
+nav {
+    align-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+nav ul {
+    height: 45%;
+    width: 55%;
+    display: flex;
+    gap: 35px;
+    border-radius: 20px;
+    border: 1px solid white;
+    /* display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; */
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 10em;
+    text-decoration: none;
+}
+
+li a {
+    text-align: center;
+    color: white;
+    background-color: #0D47A1;
+    padding: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+
+}
+
+li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 20px 1px #00a2ff;
+    filter: brightness(1.3);
+}
+
+/*Parte del main*/
+main {
+    box-shadow: 0 0 7px 20px gainsboro;
+    /* left: 0; */
+    margin: 9rem 30px 0 30px;
+    border-radius: 20px;
+}
+
+.titulo {
+    font-size: 30px;
+}
+
+#plan-estudios {
+    padding: 2rem 8rem;
+    justify-items: center;
+}
+
+#plan-estudios div {
+    display: flex;
+    margin: 10px 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn {
+    background-color: #43A047;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(68, 162, 72);
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    background-color: #0D47A1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn,
+#titulo-tabla {
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#titulo-tabla {
+    width: 9em;
+    height: 2em;
+    background-color: #018dff;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+}
+
+
+/*Estilo tabla plan de estudio*/
+.div-pe {
+    overflow-x: auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F9FAFB;
+    table-layout: fixed;
+}
+
+thead {
+    background-color: #1565C0;
+    color: #F9FAFB;
+    font-weight: bold;
+}
+
+th,
+td {
+    text-align: center;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 10px 20px;
+}
+
+tbody tr:hover {
+    background-color: #BBDEFB;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*Slides Grupos de Investigación*/
+
+.div-container {
+    position: relative;
+    width: 90em;
+    height: 40em;
+    overflow: hidden;
+    border-radius: 12px;
+    background: linear-gradient(blue, gray);
+    transition: all 0.3s ease;
+
+}
+
+.div-grupos {
+    padding: 0;
+}
+
+.slides {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 60%;
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 1% 6%;
+
+}
+
+#seccion-investigacion,
+#marco-formativo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-grupo {
+    color: rgba(135, 206, 235, 1);
+    text-align: center;
+    font-size: 25px;
+}
+
+.div-grupos {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.subtitulo {
+    color: rgb(255, 223, 0);
+}
+
+.slide div p,
+.slide div ul li {
+    color: rgb(211, 209, 209);
+}
+
+.div-grupos a {
+    display: flex;
+    justify-content: center;
+}
+
+.div-grupos a img {
+    width: 50%;
+    height: 30%;
+    border-radius: 20px;
+}
+
+.btn-antes,
+.btn-despues {
+    position: absolute;
+    background-color: rgba(80, 200, 120, 1);
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    border-radius: 30px;
+}
+
+.btn-antes {
+    left: 10px;
+}
+
+.btn-despues {
+    right: 21px;
+}
+
+
+/*Marco institucional (visión, misión y perfil institucional)*/
+.div-misvis {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.marcos-inst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    /* height: 100px;
+    width: 100px; */
+    border-radius: 20px;
+}
+
+.marcos-inst p, .li-perfil li {
+    text-align: center;
+    opacity: 0;
+    padding: 20px;
+    color: black;
+    height: 100%;
+    align-content: center;
+    line-height: 1.5em;
+    font-size: 20px;
+    margin: 0;
+}
+
+#vision {
+    background-image: url(/img/vision.png);
+}
+
+#mision {
+    background-image: url(/img/mision.png);
+}
+
+#perfil-ocupacional {
+    background-image: url(/img/perfilocupacionl.png);
+}
+
+#vision,
+#mision,
+#perfil-ocupacional {
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    border-radius: 20px;
+}
+
+.marcos-inst:hover p, #perfil-ocupacional:hover ul li {
+    opacity: 1;
+}
+
+#vision:hover,
+#mision:hover,
+#perfil-ocupacional:hover {
+    box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    transform: scale(1.05);
+    background-image: none;
+}
+
+.contenido-seccion {
+    margin: 20px;
+    padding: 0;
+}
+
+#perfil-ocupacional {
+    margin: 5em;
+}
+
+.li-perfil li {
+    height: 25%;
+    text-align: left;
+}
+
+.li-perfil {
+    padding: 0 5rem;
+    padding-bottom: 2rem;
+}

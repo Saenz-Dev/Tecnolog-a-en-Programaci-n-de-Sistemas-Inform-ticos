@@ -10,6 +10,7 @@ body {
 
 header {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -98,7 +99,7 @@ main {
 }
 
 .titulo {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #plan-estudios {
@@ -186,13 +187,17 @@ tbody tr:hover {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+    
 }
 
+section {
+    margin: 3em 0;
+}
 /*Slides Grupos de Investigación*/
 
 .div-container {
     position: relative;
-    width: 90em;
+    width: 80%;
     height: 40em;
     overflow: hidden;
     border-radius: 12px;
@@ -207,31 +212,29 @@ tr:nth-child(even) {
 
 .slides {
     display: flex;
+    height: 100%;
     margin: 0;
     width: 100%;
-    height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
 .slide {
     width: 100%;
-    height: 60%;
     flex: 0 0 100%;
     margin: 0;
     padding: 1% 6%;
-
 }
 
 #seccion-investigacion,
-#marco-formativo {
+#marco-formativo, .formulario, .seccion{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .div-container:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -347,7 +350,8 @@ tr:nth-child(even) {
 #vision:hover,
 #mision:hover,
 #perfil-ocupacional:hover {
-    box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 15px rgba(75, 154, 251, 0.829);
+    border: 3px solid #5a77f8;
     background-color: #ffffff;
     transform: scale(1.05);
     background-image: none;
@@ -358,16 +362,124 @@ tr:nth-child(even) {
     padding: 0;
 }
 
+#contenido-seccion-marco {
+    line-height: 10px;
+    height: 0;
+}
+
 #perfil-ocupacional {
     margin: 5em;
 }
 
 .li-perfil li {
-    height: 25%;
-    text-align: left;
+    height: auto;
+    padding: 10px;
+    text-align: justify;
 }
 
 .li-perfil {
-    padding: 0 5rem;
-    padding-bottom: 2rem;
+    padding: 0 7rem;
+    padding-bottom: 1rem;
+}
+
+/*Estilos para forluario*/
+
+
+.formulario {
+    margin-bottom: 4em;
+    width: 24rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 3em 20px;
+}
+
+.formulario input, .select-programa {
+    border-radius: 15px;
+    height: 2.5rem;
+    width: 80%;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    text-indent: 10px;
+    opacity: 1;
+    outline: 2px solid  rgba(96, 96, 96, 0.392);
+    border: none;
+}
+.formulario label {
+    justify-content: left;
+    justify-items: left;
+    text-align: left;
+}
+
+.boton-enviar, .boton-limpiar {
+    height: 2.5em;
+    width: 9em;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 223, 0);
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+}
+
+.boton-enviar:hover, .boton-limpiar:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-formulario {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.formulario input::placeholder {
+    text-indent: 10px;
+}
+
+.formulario input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.formulario-gidati {
+    background: linear-gradient(rgb(240, 128, 0), rgb(0, 162, 255), rgb(240, 192, 0));
+}
+
+.formulario input:focus {
+    transform: scale(1.05);
+    outline: 2px solid #00bbff;
+    box-shadow: 0 0 10px 5px #5555ff;
+}
+
+.formulario-tica {
+    background-color: rgb(63, 63, 63);
+    color: white;
+}
+
+.formulario-gii {
+    background: linear-gradient(rgb(255, 174, 0), green, rgb(255, 183, 0));
+}
+
+.formulario-gti {
+    background: linear-gradient(rgb(255, 138, 138), red, rgb(255, 138, 138));
+}
+
+.formulario-gamma {
+    background: linear-gradient(rgb(209, 13, 226), rgb(116, 21, 171));
+}
+
+.formulario {
+    background-color: #2b2b2b;
+}
+
+footer {
+    height: 10em;
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
 }

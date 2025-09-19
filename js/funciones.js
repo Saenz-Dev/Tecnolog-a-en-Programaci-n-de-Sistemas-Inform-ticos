@@ -92,6 +92,10 @@ let posicionSlider = 0;
 
 function pasarGrupos(direccion) {
     let grupo = document.getElementsByClassName("slide");
+    let poscicionScroll = document.querySelectorAll(".slides");
+    for(let slide of poscicionScroll) {
+        slide.scrollTo(0,0);
+    }
     for (let i = 0; i < grupo.length; i++) {
         grupo[i].style.display = "none";
     }

@@ -8,6 +8,59 @@ body {
     margin: 0;
 }
 
+#dropdown {
+    position: relative;
+    height: 100%;
+    display: none;
+    /* justify-content: left; */
+}
+
+.dropbtn {
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    align-items: start;
+    justify-content: left;
+    display: none;
+    position: absolute;
+    background-color: #0e02ff;
+    height: 100%;
+    align-items: center;
+
+    list-style: none;
+    min-width: 200px;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 10px;
+    display: block;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background-color: #00bbff;
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
 header {
     position: fixed;
     z-index: 1000;
@@ -31,6 +84,7 @@ header div {
     justify-content: center;
     padding: 10px;
 }
+
 
 header div h1 {
     width: 80%;
@@ -73,7 +127,7 @@ nav ul li {
     text-decoration: none;
 }
 
-li a {
+.referencias-nav {
     text-align: center;
     color: white;
     background-color: #0D47A1;
@@ -84,7 +138,7 @@ li a {
 
 }
 
-li a:hover {
+.referencias-nav:hover {
     transform: scale(1.1);
     box-shadow: 0 3px 20px 1px #00a2ff;
     filter: brightness(1.3);
@@ -187,12 +241,13 @@ tbody tr:hover {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
-    
+
 }
 
 section {
     margin: 3em 0;
 }
+
 /*Slides Grupos de Investigación*/
 
 .div-container {
@@ -227,10 +282,13 @@ section {
 }
 
 #seccion-investigacion,
-#marco-formativo, .formulario, .seccion{
+#marco-formativo,
+.formulario,
+.seccion {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 9em;
 }
 
 .div-container:hover {
@@ -299,6 +357,7 @@ section {
 
 .marcos-inst {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -308,7 +367,8 @@ section {
     border-radius: 20px;
 }
 
-.marcos-inst p, .li-perfil li {
+.marcos-inst p,
+.li-perfil li {
     text-align: center;
     opacity: 0;
     padding: 20px;
@@ -343,7 +403,8 @@ section {
     border-radius: 20px;
 }
 
-.marcos-inst:hover p, #perfil-ocupacional:hover ul li {
+.marcos-inst:hover p,
+#perfil-ocupacional:hover ul li {
     opacity: 1;
 }
 
@@ -396,7 +457,8 @@ section {
     padding: 3em 20px;
 }
 
-.formulario input, .select-programa {
+.formulario input,
+.select-programa {
     border-radius: 15px;
     height: 2.5rem;
     width: 80%;
@@ -404,16 +466,18 @@ section {
     transition: all 0.3s ease;
     text-indent: 10px;
     opacity: 1;
-    outline: 2px solid  rgba(96, 96, 96, 0.392);
+    outline: 2px solid rgba(96, 96, 96, 0.392);
     border: none;
 }
+
 .formulario label {
     justify-content: left;
     justify-items: left;
     text-align: left;
 }
 
-.boton-enviar, .boton-limpiar {
+.boton-enviar,
+.boton-limpiar {
     height: 2.5em;
     width: 9em;
     border-radius: 20px;
@@ -423,7 +487,8 @@ section {
     transition: all 0.3s ease-in;
 }
 
-.boton-enviar:hover, .boton-limpiar:hover {
+.boton-enviar:hover,
+.boton-limpiar:hover {
     transform: scale(1.1) translateY(-3px);
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
@@ -482,4 +547,154 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 1%;
+}
+
+/* @media (max-width: 481px) {
+    main {
+        width: 120vh;
+    }
+    header {
+        width: 120vh;
+    }
+    nav ul {
+        display: none;
+    }
+    #dropdown {
+        display: block;
+    }
+    main {
+
+    }
+
+    .material-icons {}
+} */
+
+@media (max-width: 481px) {
+    #dropdown {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin: 0;
+        border-radius: 0;
+        padding: 1rem;
+        width: 32rem;
+    }
+
+    header div {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    header div h1 {
+        font-size: 18px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    nav div {
+        align-items: start;
+        justify-items: right;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        border: none;
+    }
+    #dropdown {
+        display: flex;
+        justify-content: right;
+    }
+
+    .dropdown-content {
+        margin-top: 3.5em;
+        height: 6em;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    main {
+        margin: 8rem 10px 0 10px;  
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #plan-estudios {
+        padding: 1rem;
+    }
+    #plan-estudios div {
+        gap: 1px;
+    }
+    #titulo-tabla {
+        width: 7em;
+    }
+    .div-pe {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .div-container {
+        width: 100%;
+        height: 30em;
+    }
+    #contenido-seccion-marco {
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .div-misvis {
+        grid-template-columns: 1fr;
+    }
+
+    .marcos-inst {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .formulario {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    .marcos-inst p, .li-perfil li {
+        font-size: 11px;
+    }
+
+    .li-perfil {
+        padding: 0;
+        margin: 0 30px 0 30px;
+    }
+
+    footer {
+        text-align: center;
+        width: 105%;
+        font-size: 14px;
+    }
 }

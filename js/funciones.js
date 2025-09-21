@@ -1,117 +1,28 @@
-let planSemestre = {
-    1: [
-        { materia: "Métodos de estudio y aprendizaje autónomo", creditos: 3, horas: 9, habilidades: "Gestión del tiempo y técnicas de aprendizaje" },
-        { materia: "Instalación y Configuración de Sistemas Operativos", creditos: 3, horas: 9, habilidades: "Instalar y configurar sistemas operativos" },
-        { materia: "Fundamentos de Programación", creditos: 4, horas: 12, habilidades: "Resolver problemas básicos con código" },
-        { materia: "Herramientas Digitales para la Gestión del Conocimiento", creditos: 3, horas: 9, habilidades: "Usar software para organizar y comunicar información" },
-        { materia: "Pensamiento Lógico y Matemático", creditos: 3, horas: 9, habilidades: "Aplicar lógica y matemáticas en resolución de problemas" }
-    ],
-    2: [
-        { materia: "Infraestructura, diseño e instrumentación en redes LAN", creditos: 3, horas: 9, habilidades: "Diseñar y configurar redes locales" },
-        { materia: "Programación I", creditos: 4, horas: 12, habilidades: "Desarrollar programas con estructuras básicas" },
-        { materia: "Bases de datos", creditos: 3, horas: 9, habilidades: "Crear y consultar bases de datos relacionales" },
-        { materia: "Diseño y formulación de proyectos", creditos: 3, horas: 9, habilidades: "Plantear y estructurar proyectos académicos o técnicos" },
-        { materia: "Cálculo", creditos: 3, horas: 9, habilidades: "Aplicar conceptos de cálculo en problemas técnicos" }
-    ],
-    3: [
-        { materia: "Electiva social y humanística", creditos: 3, horas: 9, habilidades: "Comprender contextos sociales y culturales" },
-        { materia: "Electiva I", creditos: 3, horas: 9, habilidades: "Desarrollar competencias en un área complementaria" },
-        { materia: "Programación II", creditos: 4, horas: 12, habilidades: "Aplicar programación orientada a objetos" },
-        { materia: "Análisis y Diseño de Software", creditos: 3, horas: 9, habilidades: "Modelar y diseñar sistemas de software" },
-        { materia: "Física", creditos: 4, horas: 12, habilidades: "Analizar fenómenos físicos aplicados a la ingeniería" }
-    ],
-    4: [
-        { materia: "Electiva Social II", creditos: 3, horas: 9, habilidades: "Fortalecer valores y competencias sociales" },
-        { materia: "Programación III", creditos: 4, horas: 12, habilidades: "Desarrollar aplicaciones avanzadas en distintos lenguajes" },
-        { materia: "Ingeniería de Software", creditos: 3, horas: 9, habilidades: "Aplicar metodologías de desarrollo de software" },
-        { materia: "Estadística Aplicada", creditos: 3, horas: 9, habilidades: "Analizar datos y generar conclusiones estadísticas" },
-        { materia: "Fundamentos de administración", creditos: 3, horas: 9, habilidades: "Comprender principios de gestión organizacional" }
-    ],
-    5: [
-        { materia: "Innovación y transformación digital", creditos: 3, horas: 9, habilidades: "Proponer soluciones basadas en nuevas tecnologías" },
-        { materia: "Integración tecnológica para el desarrollo de aplicaciones", creditos: 3, horas: 9, habilidades: "Integrar distintas tecnologías en un solo sistema" },
-        { materia: "Electiva II", creditos: 3, horas: 9, habilidades: "Ampliar conocimientos en un campo específico" },
-        { materia: "Teoría de Probabilidades aplicada", creditos: 4, horas: 12, habilidades: "Modelar fenómenos con probabilidad" },
-        { materia: "Emprendimiento e innovación", creditos: 3, horas: 9, habilidades: "Desarrollar ideas de negocio y proyectos innovadores" }
-    ],
-    6: [
-        { materia: "Electiva Social y humanística", creditos: 3, horas: 9, habilidades: "Comprender problemáticas sociales con enfoque crítico" },
-        { materia: "Electiva III", creditos: 3, horas: 9, habilidades: "Profundizar en un área técnica o interdisciplinaria" },
-        { materia: "Electiva IV", creditos: 3, horas: 9, habilidades: "Fortalecer conocimientos de interés específico" },
-        { materia: "Modelos de Gestión de la Información", creditos: 3, horas: 9, habilidades: "Organizar y gestionar información en entornos digitales" },
-        { materia: "Opción de Grado", creditos: 3, horas: 9, habilidades: "Aplicar los conocimientos en un proyecto final o de investigación" }
-    ]
-}
-
-
-function llenarPlanEstudios(semestre) {
-    let asignaturas = planSemestre[semestre];
-    let tablaPlanEstudio = document.getElementById("table-asignaturas");
-    cleanBodyTable(tablaPlanEstudio);
-    llenarBodyTabla(tablaPlanEstudio.querySelector("tbody"), asignaturas);
-    document.getElementById("titulo-tabla").textContent = `Semestre ${semestre}`;
-}
-
-/*Se utiliza querySelector para encontrar la primera coincidencia HTML*/
-function cleanBodyTable(tabla) {
-    tabla.querySelector("tbody").innerHTML = "";
-}
-
-function createBodyTable(tabla) {
-    return document.createElement("tbody");
-}
-
-function llenarBodyTabla(bodyTable, asignaturas) {
-    for (let asignatura of asignaturas) {
-        let fila = document.createElement("tr");
-        let celdaAsignatura = document.createElement("td");
-        celdaAsignatura.textContent = asignatura.materia;
-        let celdaCreditos = document.createElement("td");
-        celdaCreditos.textContent = asignatura.creditos;
-        let celdaHoras = document.createElement("td");
-        celdaHoras.textContent = asignatura.horas;
-        let habilidades = document.createElement("td");
-        habilidades.textContent = asignatura.habilidades;
-        fila.appendChild(celdaAsignatura);
-        fila.appendChild(celdaCreditos);
-        fila.appendChild(celdaHoras);
-        fila.appendChild(habilidades)
-        bodyTable.append(fila);
-    }
-}
-
-document.getElementById("btn-uno").addEventListener("click", () => { llenarPlanEstudios(1) });
-document.getElementById("btn-dos").addEventListener("click", () => { llenarPlanEstudios(2) });
-document.getElementById("btn-tres").addEventListener("click", () => { llenarPlanEstudios(3) });
-document.getElementById("btn-cuatro").addEventListener("click", () => { llenarPlanEstudios(4) });
-document.getElementById("btn-cinco").addEventListener("click", () => { llenarPlanEstudios(5) });
-document.getElementById("btn-seis").addEventListener("click", () => { llenarPlanEstudios(6) });
-
-/*Funcion para pasar de pagina el slider*/
-let posicionSlider = 0;
-
-function pasarGrupos(direccion) {
-    let grupo = document.getElementsByClassName("slide");
-    let poscicionScroll = document.querySelectorAll(".slides");
-    for(let slide of poscicionScroll) {
-        slide.scrollTo(0,0);
-    }
-    for (let i = 0; i < grupo.length; i++) {
-        grupo[i].style.display = "none";
-    }
-    posicionSlider += direccion; 
-    if (posicionSlider >= grupo.length) {
-        posicionSlider = 0;
-    }
-    if (posicionSlider < 0) {
-        posicionSlider = grupo.length - 1;
-    }
-    grupo[posicionSlider].style.display = "block";
-}
-
-document.getElementById("btn-antes").addEventListener("click", () => {
-    pasarGrupos(-1);
-});
-document.getElementById("btn-despues").addEventListener("click", () => {
-    pasarGrupos(1);
-});
+let planSemestre={1:[{materia:"Métodos de estudio y aprendizaje autónomo",creditos:3,horas:9,habilidades:"Gestión del tiempo y técnicas de aprendizaje"},{materia:"Instalación y Configuración de Sistemas Operativos",creditos:3,horas:9,habilidades:"Instalar y configurar sistemas operativos"},{materia:"Fundamentos de Programación",creditos:4,horas:12,habilidades:"Resolver problemas básicos con código"},{materia:"Herramientas Digitales para la Gestión del Conocimiento",creditos:3,horas:9,habilidades:"Usar software para organizar y comunicar información"},{materia:"Pensamiento Lógico y Matemático",creditos:3,horas:9,habilidades:"Aplicar lógica y matemáticas en resolución de problemas"}],2:[{materia:"Infraestructura, diseño e instrumentación en redes LAN",creditos:3,horas:9,habilidades:"Diseñar y configurar redes locales"},{materia:"Programación I",creditos:4,horas:12,habilidades:"Desarrollar programas con estructuras básicas"},{materia:"Bases de datos",creditos:3,horas:9,habilidades:"Crear y consultar bases de datos relacionales"},{materia:"Diseño y formulación de proyectos",creditos:3,horas:9,habilidades:"Plantear y estructurar proyectos académicos o técnicos"},{materia:"Cálculo",creditos:3,horas:9,habilidades:"Aplicar conceptos de cálculo en problemas técnicos"}],3:[{materia:"Electiva social y humanística",creditos:3,horas:9,habilidades:"Comprender contextos sociales y culturales"},{materia:"Electiva I",creditos:3,horas:9,habilidades:"Desarrollar competencias en un área complementaria"},{materia:"Programación II",creditos:4,horas:12,habilidades:"Aplicar programación orientada a objetos"},{materia:"Análisis y Diseño de Software",creditos:3,horas:9,habilidades:"Modelar y diseñar sistemas de software"},{materia:"Física",creditos:4,horas:12,habilidades:"Analizar fenómenos físicos aplicados a la ingeniería"}],4:[{materia:"Electiva Social II",creditos:3,horas:9,habilidades:"Fortalecer valores y competencias sociales"},{materia:"Programación III",creditos:4,horas:12,habilidades:"Desarrollar aplicaciones avanzadas en distintos lenguajes"},{materia:"Ingeniería de Software",creditos:3,horas:9,habilidades:"Aplicar metodologías de desarrollo de software"},{materia:"Estadística Aplicada",creditos:3,horas:9,habilidades:"Analizar datos y generar conclusiones estadísticas"},{materia:"Fundamentos de administración",creditos:3,horas:9,habilidades:"Comprender principios de gestión organizacional"}],5:[{materia:"Innovación y transformación digital",creditos:3,horas:9,habilidades:"Proponer soluciones basadas en nuevas tecnologías"},{materia:"Integración tecnológica para el desarrollo de aplicaciones",creditos:3,horas:9,habilidades:"Integrar distintas tecnologías en un solo sistema"},{materia:"Electiva II",creditos:3,horas:9,habilidades:"Ampliar conocimientos en un campo específico"},{materia:"Teoría de Probabilidades aplicada",creditos:4,horas:12,habilidades:"Modelar fenómenos con probabilidad"},{materia:"Emprendimiento e innovación",creditos:3,horas:9,habilidades:"Desarrollar ideas de negocio y proyectos innovadores"}],6:[{materia:"Electiva Social y humanística",creditos:3,horas:9,habilidades:"Comprender problemáticas sociales con enfoque crítico"},{materia:"Electiva III",creditos:3,horas:9,habilidades:"Profundizar en un área técnica o interdisciplinaria"},{materia:"Electiva IV",creditos:3,horas:9,habilidades:"Fortalecer conocimientos de interés específico"},{materia:"Modelos de Gestión de la Información",creditos:3,horas:9,habilidades:"Organizar y gestionar información en entornos digitales"},{materia:"Opción de Grado",creditos:3,horas:9,habilidades:"Aplicar los conocimientos en un proyecto final o de investigación"}]}
+function llenarPlanEstudios(semestre){let asignaturas=planSemestre[semestre];let tablaPlanEstudio=document.getElementById("table-asignaturas");cleanBodyTable(tablaPlanEstudio);llenarBodyTabla(tablaPlanEstudio.querySelector("tbody"),asignaturas);document.getElementById("titulo-tabla").textContent=`Semestre ${semestre}`}
+function cleanBodyTable(tabla){tabla.querySelector("tbody").innerHTML=""}
+function createBodyTable(tabla){return document.createElement("tbody")}
+function llenarBodyTabla(bodyTable,asignaturas){for(let asignatura of asignaturas){let fila=document.createElement("tr");let celdaAsignatura=document.createElement("td");celdaAsignatura.textContent=asignatura.materia;let celdaCreditos=document.createElement("td");celdaCreditos.textContent=asignatura.creditos;let celdaHoras=document.createElement("td");celdaHoras.textContent=asignatura.horas;let habilidades=document.createElement("td");habilidades.textContent=asignatura.habilidades;fila.appendChild(celdaAsignatura);fila.appendChild(celdaCreditos);fila.appendChild(celdaHoras);fila.appendChild(habilidades)
+bodyTable.append(fila)}}
+document.getElementById("btn-uno").addEventListener("click",()=>{llenarPlanEstudios(1)});document.getElementById("btn-dos").addEventListener("click",()=>{llenarPlanEstudios(2)});document.getElementById("btn-tres").addEventListener("click",()=>{llenarPlanEstudios(3)});document.getElementById("btn-cuatro").addEventListener("click",()=>{llenarPlanEstudios(4)});document.getElementById("btn-cinco").addEventListener("click",()=>{llenarPlanEstudios(5)});document.getElementById("btn-seis").addEventListener("click",()=>{llenarPlanEstudios(6)});let posicionSlider=0;function pasarGrupos(direccion){let grupo=document.getElementsByClassName("slide");let poscicionScroll=document.querySelectorAll(".slides");for(let slide of poscicionScroll){slide.scrollTo(0,0)}
+for(let i=0;i<grupo.length;i++){grupo[i].style.display="none"}
+posicionSlider+=direccion;if(posicionSlider>=grupo.length){posicionSlider=0}
+if(posicionSlider<0){posicionSlider=grupo.length-1}
+grupo[posicionSlider].style.display="block"}
+document.getElementById("btn-antes").addEventListener("click",()=>{pasarGrupos(-1);limpiarInputs();quitarPersonalizacionInput()});document.getElementById("btn-despues").addEventListener("click",()=>{pasarGrupos(1);limpiarInputs();quitarPersonalizacionInput()});function limpiarInputs(){let inputs=document.querySelectorAll("input");inputs.forEach((input)=>{input.value=""})}
+const form=document.getElementById("formulario");function validarCampo(campo,condicion,mensaje){if(campo.value.length==0){campo.classList.remove("success","error");let errorSpan=campo.nextElementSibling;if(errorSpan&&errorSpan.classList.contains("error")){errorSpan.textContent=""}
+return}
+let errorSpan=campo.nextElementSibling;if(!errorSpan||!errorSpan.classList.contains("error")){errorSpan=document.createElement("span");errorSpan.classList.add("error");campo.insertAdjacentElement("afterend",errorSpan)}
+if(condicion){errorSpan.textContent="";campo.classList.add("success");return!0}else{errorSpan.textContent=mensaje;campo.classList.remove("success")}}
+function quitarPersonalizacionInput(){document.querySelectorAll("[name='nombres']").forEach((input)=>{eliminarIndicadores(input)});document.querySelectorAll("[name='apellidos']").forEach((input)=>{eliminarIndicadores(input)});document.querySelectorAll("[name='correo']").forEach((input)=>{eliminarIndicadores(input)});document.querySelectorAll("[name='telefono']").forEach((input)=>{eliminarIndicadores(input)})}
+function eliminarIndicadores(input){input.classList.remove("success","error");let errorSpan=input.nextElementSibling;if(errorSpan&&errorSpan.classList.contains("error")){errorSpan.textContent=""}}
+document.querySelectorAll(".formulario").forEach(form=>{let nombres=form.querySelector("[name='nombres']");let apellidos=form.querySelector("[name='apellidos']");let correo=form.querySelector("[name='correo']");let telefono=form.querySelector("[name='telefono']");nombres.addEventListener("input",function(){validarCampo(this,this.value.length>=3,"El nombre debe tener al menos 4 caracteres")});apellidos.addEventListener("input",function(){validarCampo(this,this.value.length>=3,"El apellido debe tener al menos 4 caracteres")});correo.addEventListener("input",function(){const regex=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;validarCampo(this,regex.test(this.value),"Correo inválido")});telefono.addEventListener("input",function(){const regex=/^\d{10}$/;validarCampo(this,regex.test(this.value),"El teléfono debe tener 10 dígitos")})});document.querySelectorAll(".boton-limpiar").forEach((boton)=>{boton.addEventListener("click",quitarPersonalizacionInput)});const modal=document.querySelector(".modal");const overlay=document.querySelector(".overlay");const openModalBtn=document.querySelector(".boton-enviar");const closeModalBtn=document.querySelector(".btn-close");const openModal=function(titulo,contenido){modal.classList.remove("hidden");overlay.classList.remove("hidden");document.getElementById("titulo-modal").textContent=titulo;document.getElementById("contenido-modal").textContent=contenido};const closeModal=function(){modal.classList.add("hidden");overlay.classList.add("hidden")}
+openModalBtn.addEventListener("click",(event)=>{event.preventDefault();openModal()});closeModalBtn.addEventListener("click",closeModal);function validarGrupo(event,boton){event.preventDefault();const form=boton.closest("form");let banderaError=validarEnviarDatos(form);if(!banderaError)return;if(form.classList.contains("formulario-tica"))grupo="TICA";else if(form.classList.contains("formulario-gti"))grupo="GTI";else if(form.classList.contains("formulario-gidati"))grupo="GIDATI";else if(form.classList.contains("formulario-gii"))grupo="GII";else if(form.classList.contains("formulario-gamma"))grupo="GAMMA";openModal("Formulario enviado",`Tu inscripción al grupo ${grupo} fue registrada correctamente`);limpiarInputs();quitarPersonalizacionInput()}
+function validarEnviarDatos(form){let nombres=form.querySelector('[name="nombres"]').value.trim();let apellidos=form.querySelector('[name="apellidos"]').value.trim();let correo=form.querySelector('[name="correo"]').value.trim();let telefono=form.querySelector('[name="telefono"]').value.trim();if(nombres===""||!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombres)){openModal("Llena los campos","Por favor ingresa un nombre válido.");return!1}
+if(!(nombres.length>=3)){openModal("Corrige el nombre","El nombre debe tener más de tres letras.");return!1}
+if(apellidos===""||!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(apellidos)){openModal("Llena los campos","Por favor ingresa un apellido válido.");return!1}
+if(!(apellidos.length>=3)){openModal("Corrige el apellido","El apellido debe tener más de tres letras.");return!1}
+let regexCorreo=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;if(!regexCorreo.test(correo)){openModal("Llena los campos","Por favor ingresa un correo válido.");return!1}
+if(!/^\d{10}$/.test(telefono)){openModal("Llena los campos","Por favor ingresa un teléfono válido (10 dígitos).");return!1}
+openModal("Felicitaciones","Su formulario ha sido enviado correctamente"+nombres);return!0}
+document.querySelectorAll(".boton-enviar").forEach((boton)=>{boton.addEventListener("click",(event)=>{validarGrupo(event,boton)})})
